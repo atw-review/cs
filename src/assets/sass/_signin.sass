@@ -1,0 +1,102 @@
+@import _chillspace-variables
+
+body.singin-page
+  width: 100%
+  max-width: 100%
+  height: 100%
+  color: $text-light
+  background: $bg-dark image-url("common/bg-signin.jpg") left top no-repeat
+  background-size: cover
+  &.overlay::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: inherit
+    min-width: inherit
+    height: inherit
+    background: rgba($black, .79)
+  section
+    padding: 5rem 0
+  h1.title
+    margin-bottom: .6rem
+    font-family: 'Oswald', sans-serif
+    font-size: 2rem
+    font-weight: 300
+    letter-spacing: .5px
+    color: $text-light-lighten
+    text-align: center
+  h2.subtitle
+    margin-bottom: 1rem
+    font-size: 1.1rem
+    font-weight: 300
+    letter-spacing: .5px
+    color: $text-light-lighten
+    text-align: center
+  form
+    margin-top: 4rem
+  .form-group
+    margin-bottom: 1.5rem
+    input.form-control
+      padding: .5rem .2rem
+      color: $text-light-lighten
+      background: transparent
+      border: none
+      border-bottom: 1px solid rgba($border-primary, .5)
+      +input-placeholder
+        color: $text-light-darken
+    &:nth-child(2)
+      margin-bottom: 3rem
+  .subfeatures
+    margin: 0 0 .3rem
+    line-height: 1.6
+    color: $text-primary
+    text-decoration: none
+    input
+      &[type=checkbox]
+        position: absolute
+        z-index: 2
+        margin: 0
+        opacity: 0
+    .form-check-label
+      width: 100%
+      padding-left: 24px
+      +user-select(none)
+      &::before,
+      &::after
+        content: ''
+        position: absolute
+        top: 12px
+        left: 0
+        width: 16px
+        height: 16px
+        +transform(translateY(-50%))
+      &::before
+        display: block
+        background: $white
+        border: 1px solid $border-dark
+        border-radius: 0
+      &::after
+        display: none
+        background: image-url("common/icon-check.svg") center center no-repeat
+    input
+      &[type=checkbox]:checked + label::before
+        border-color: $primary-light
+        background-color: $primary-light
+      &[type=checkbox]:checked + label::after
+        display: block
+  p
+    margin: 0
+    text-align: center
+    &.or
+      margin: .6rem 0
+      font-size: .85rem
+      color: $text-light-darken
+      opacity: .8
+    &.hint
+      margin: 1.5rem 0 .2rem
+      color: $text-light-darken
+  footer
+    padding: 2rem 0
+    color: $text-light-lighten
+    background: transparent

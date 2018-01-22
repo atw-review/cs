@@ -1,0 +1,164 @@
+@import _chillspace-variables
+
+.modal
+  .modal-dialog
+    opacity: 0
+  &.show
+    .modal-dialog
+      top: 50%
+      margin: 0 auto
+      opacity: 1
+      +transition(opacity .3s ease-in-out)
+      +transform(translate(0,-50%))
+
+.modal-backdrop
+  &.show
+    opacity: .9
+
+.rental-modal
+  .modal-dialog.modal-lg
+    width: $content-min-width !important
+    max-width: $content-min-width !important
+  .modal-content
+    color: $text-light-darken
+    background: $bg-dark
+    border: none
+    border-radius: 0
+    text-rendering: auto
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+  &.space,
+  &.backdrop
+    .modal-img
+      width: 700px
+    .modal-detail
+      width: calc(100% - 700px)
+  &.prop
+    .modal-img
+      width: 466px
+    .modal-detail
+      width: calc(100% - 466px)
+  .modal-detail
+    padding: 2.9rem 2.2rem 2rem
+    box-shadow: inset 25px 0 25px -20px #222
+    .modal-header
+      display: block
+      padding: 0
+      margin-bottom: 1.1rem
+      border: none
+      .item-title
+        margin-bottom: .4rem
+        font-size: 1.6rem
+        font-weight: 300
+        color: $text-light
+      .item-price
+        margin-bottom: 0
+        font-family: $font-family-number
+        font-size: 1.2rem
+        font-weight: 600
+        color: $text-light-lighten
+        .currency
+          margin-right: .1rem
+          font-size: 1.1rem
+          font-weight: 400
+        .unit
+          margin-left: .4rem
+          font-size: .8rem
+          font-weight: 300
+          opacity: .5
+      button.close
+        position: absolute
+        top: 16px
+        right: 16px
+        width: 48px
+        height: 48px
+        color: $icon-light
+        text-shadow: none
+    .modal-body
+      padding: 0
+      .nav-tabs
+        margin: 0 0 1rem 0
+        border-bottom: 1px solid $divider-light
+        .nav-item
+          margin-bottom: 2px
+        .nav-link
+          padding: .3rem 2rem
+          font-size: .9rem
+          color: $text-light-darken
+          border: none
+          border-radius: 0
+          &:hover
+            border: none
+            border-radius: 0
+          &.active
+            color: $text-light-lighten
+            background: transparent
+            border: none
+            border-radius: 0
+            box-shadow: 0 2px 0 $text-light-lighten
+      .tab-content
+        position: relative
+        height: 160px
+        overflow-y: scroll
+        .tab-text
+          font-weight: 300
+          font-size: .9rem
+          line-height: 1.8
+    .modal-footer
+      position: relative
+      display: block
+      padding: 0
+      border: none
+      form
+        .qty-selector
+          position: relative
+          width: 90px
+          margin: 0 .5rem 0 0
+          &::after
+            content: "\f107"
+            position: absolute
+            right: 15px
+            bottom: 18px
+            display: inline-block
+            font: bold normal normal 14px/1 FontAwesome
+            font-size: inherit
+            color: $text-primary
+          label
+            margin-bottom: .4rem
+            font-size: .8rem
+            color: $text-primary
+            .only-one
+              margin-left: .2rem
+          select.form-control
+            width: 100%
+            color: $text-light-lighten
+            background: $bg-gray
+            border-color: $bg-gray
+            border-radius: 0
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+        .btn-add-to-cart
+          padding: 1rem
+          font-size: .95rem
+          font-weight: 500
+          .subtotal
+            margin-left: .2rem
+            font-size: .85rem
+            opacity: .8
+          &:disabled
+            background: $bg-gray
+            border-color: $bg-gray
+        .btn-download-modal
+          padding: 1rem
+          margin-left: .3rem
+          font-size: .95rem
+          color: $text-primary
+          position: relative
+          &::before
+            content: "\f1b2"
+            display: inline-block
+            margin-right: .2rem
+            font: normal normal normal 14px/1 FontAwesome
+            font-size: inherit
+            color: $text-primary

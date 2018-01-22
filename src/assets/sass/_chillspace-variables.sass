@@ -1,0 +1,147 @@
+// bootstrap color
+$white:    #fff
+$gray-100: #f8f9fa
+$gray-200: #e9ecef
+$gray-300: #dee2e6
+$gray-400: #ced4da
+$gray-500: #adb5bd
+$gray-600: #868e96
+$gray-700: #495057
+$gray-800: #343a40
+$gray-900: #212529
+$black:    #000
+
+$primary:         #a59569                        // 確認租賃鍵
+$primary-light:   lighten($primary, 10%)         // 道具篩選勾、側欄購物車按鈕、數量下拉
+$secondary:       #bba875
+$light:           #f5f5f5
+$gray:            #484a4c
+$dark:            $gray-900                       // 舊色碼：#2a2a2a
+$red:             #e94b35                         // 側欄購物車按鈕數字
+$yellow:          #ffea91                         // 即可租用
+
+$theme-colors: ("primary": #a29161, "secondary": #bba875, "facebook": #3b5998)
+
+
+// ---------------------------------------
+// dark theme (黑底)
+// ---------------------------------------
+$bg-dark:                  $dark
+$text-light-lighten:       $light                  // 高亮：道具標籤、可租用時間
+$text-light:               rgba($light, .8)        // 一般：卡片overlay文字
+$text-light-darken:        rgba($light, .6)        // 淺字：
+$border-light:             rgba($light, .5)        // 邊框：道具卡片overlay按鈕
+$divider-light:            rgba($light, .15)        // 隔線：
+$icon-light:               rgba($light, .7)
+
+
+// ---------------------------------------
+// light theme (白底)
+// ---------------------------------------
+$bg-light:                  $light
+$text-dark-darken:          $dark                  // 高亮：側欄分類與內文、傢俱卡片文字
+$text-dark:                 rgba($dark, .8)        // 一般：側欄頂標
+$text-dark-lighten:         rgba($dark, .6)        // 淺字：道具分類標、版權
+$border-dark:               rgba($dark, .15)
+$divider-dark:              rgba($dark, .08)
+$icon-dark:                 rgba($dark, .6)
+
+
+// ---------------------------------------
+// gold theme
+// ---------------------------------------
+// 舊色碼：#a89868 #bcb49e
+$bg-gold:                   $primary-light
+$text-primary-lighten:      lighten($primary, 15)    // 可租用時間
+$text-primary:              lighten($primary, 5)
+$text-primary-darken:       darken($primary, 15)
+$border-primary:            rgba($primary, .5)
+
+
+// ---------------------------------------
+// gray theme
+// ---------------------------------------
+$bg-gray:                   $gray
+
+
+// ---------------------------------------
+// 限制最小寬度
+// ---------------------------------------
+$site-min-width: 1200px
+$content-min-width: 1140px
+$font-family-number: 'Open Sans', sans-serif
+
+
+// ---------------------------------------
+// import
+// ---------------------------------------
+@import compass/css3
+@import compass/css3/animation
+@import compass/css3/selection
+@import compass/css3/user-interface
+@import bootstrap/_functions
+@import bootstrap/_variables
+@import bootstrap/_mixins
+@import bootstrap/_reboot
+@import bootstrap/_utilities
+@import bootstrap/_buttons
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700')
+
+
+// ---------------------------------------
+// breakpoint mixin
+// ---------------------------------------
+@mixin bp($point)
+  @if $point == sm
+    @media only screen and (min-width: 576px)
+      @content
+  @else if $point == md
+    @media only screen and (min-width: 768px)
+      @content
+  @else if $point == lg
+    @media only screen and (min-width: 992px)
+      @content
+  @else if $point == xl
+    @media only screen and (min-width: 1200px)
+      @content
+
+
+// ---------------------------------------
+// overwrite bootstrap 4 (no responsive)
+// ---------------------------------------
+html, body
+  height: 100%
+
+html *
+  // text-rendering: auto
+  // -webkit-font-smoothing: antialiased
+  // -moz-osx-font-smoothing: grayscale
+
+header, nav, section, footer
+  min-width: $site-min-width
+
+.container
+  width: $content-min-width
+  max-width: none !important
+  padding-right: 20px
+  padding-left: 20px
+
+a:focus
+  outline: none !important
+
+.btn,
+.form-control,
+button
+  height: auto !important
+  padding: 1rem 2rem
+  line-height: 1
+  border-radius: 0
+  &:disabled
+    cursor: not-allowed
+
+.btn:focus,
+.btn.focus,
+.form-control:focus,
+.form-control.focus
+  box-shadow: none !important

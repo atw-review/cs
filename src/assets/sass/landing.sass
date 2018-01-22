@@ -1,0 +1,301 @@
+@import _chillspace-variables
+
+// overwrite bootstrap 4 (no responsive)
+header, nav, section, footer
+  min-width: 1200px
+
+.container
+  width: 1140px
+  max-width: none !important
+  padding-right: 20px
+  padding-left: 20px
+
+
+// chill space style
+html *
+  // -webkit-font-smoothing: antialiased
+  // -moz-osx-font-smoothing: grayscale
+
+body
+  position: relative
+  font-family: 'Open Sans', sans-serif
+  font-weight: 300
+  line-height: 1.72
+  color: $gray-900
+  // prevent 2 vertical scrollbars on ie and firefox when the cart is visible
+  &.overflow-hidden
+    overflow: hidden
+  +bp(md)
+    font-size: 1rem
+    line-height: 1.64
+
+*
+  +selection($bg-gold, $white)
+
+.navbar.main-nav
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 99
+  width: 100%
+  padding: 40px 50px
+  background: transparent
+  +transition (all .5s ease 0s)
+  &.navbar-expand
+    -ms-flex-flow: row nowrap
+    flex-flow: row nowrap
+    -ms-flex-pack: start
+    justify-content: flex-start
+  .navbar-brand
+    padding: 0
+    margin: 0
+    img
+      width: 85px
+      +transition (all .5s ease 0s)
+  .nav-item
+    margin: 0 1.5rem
+    &:last-child
+      margin-right: 0
+    &.active
+      border-bottom: 2px solid rgba($white,.85)
+    .nav-link
+      padding: .4rem 0
+      margin-top: -6px
+      font-size: .9rem
+      font-weight: 300
+      color: rgba($white,.85)
+      letter-spacing: .5px
+  &.nav-sticky-top
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 999
+    width: 100%
+    padding: 15px 50px
+    &.bg-faded
+      background: #333
+      box-shadow: 0 0 20px rgba(0,0,0,.1)
+      +animation(fadeInDown .3s ease-out forwardsss)
+    .navbar-brand
+      img
+        width: 56px
+    .nav-link
+      padding: .3rem 0
+
+header
+  width: 100%
+  height: 100vh
+  text-align: center
+  background: white url(../img/landing/header-bg-landing.jpg) center top no-repeat
+  background-size: cover
+  &.overlay::after
+    content: ''
+    position: absolute
+    width: inherit
+    min-width: inherit
+    height: inherit
+    top: 0
+    left: 0
+    background: rgba(0,0,0,.3)
+  hgroup
+    z-index: 1
+    margin-top: 3rem
+    color: $white
+  h1
+    margin: 0 0 1rem
+    font-size: 2.8rem
+    font-family: 'Oswald', sans-serif
+  h2
+    margin: 0
+    font-size: 1.3rem
+    font-weight: 300
+    letter-spacing: 4px
+    opacity: .8
+
+// .steps-progress-bar
+//   width: 100%
+//   padding: 50px 0
+//   color: $white
+//   background: $navbar-bg-dark
+//   &.nav-pills
+//     .nav-link
+//       position: relative
+//       margin: 0 1rem
+//       font-size: .9rem
+//       border: 1px solid $navbar-step
+//       background: $navbar-bg-dark
+//       border-radius: 10rem
+//       &.active
+//         color: $white
+//         background: $navbar-step
+//       &.disabled
+//         opacity: 1 !important
+//         pointer-events: auto !important
+//         cursor: not-allowed
+//   .subtitle
+//     margin-right: 2rem
+//   .nav-link
+//     &:not(:nth-child(5))::after
+//       content: ''
+//       position: absolute
+//       display: block
+//       background: $navbar-step
+//       width: 50px
+//       height: 2px
+//       top: 50%
+//       right: -51px
+
+section
+  padding: 10rem 0
+  &.section-bg-dark
+    background: $bg-dark
+    -webkit-font-smoothing: antialiased
+  &.section-bg-light
+    background: $bg-light
+
+.section-title-group
+  margin-bottom: 1.5rem
+  text-align: center
+  &.intro
+    .title
+      font-size: 2.5rem
+      font-weight: 500
+    .subtitle
+      margin-bottom: .6rem
+      font-family: 'Oswald', sans-serif
+      font-size: 1.375rem
+      font-weight: 300
+
+.section-1
+  p
+    margin: 1rem auto 3rem
+    font-size: 1.1rem
+    font-weight: 300
+    line-height: 1.9
+    text-align: center
+    opacity: .85
+  .justify-content-between > div
+    width: 33%
+    color: #fff
+    border-right: 1px solid #777
+    &:last-child
+      border-right: none
+  .number
+    display: block
+    margin-bottom: .5rem
+    font-family: 'Oswald', sans-serif
+    font-size: 3rem
+    font-weight: 500
+    line-height: 1
+    text-align: center
+  .des
+    display: block
+    margin: 0
+    text-align: center
+
+.section-2
+  padding: 0
+  text-align: center
+  .col
+    height: 520px
+    padding: 6.5rem 0 0
+    color: #fff
+    &.no1
+      background: white url(../img/landing/space-1.jpg) center top no-repeat
+      background-size: 520px
+    &.no2
+      background: white url(../img/landing/space-2.jpg) center top no-repeat
+      background-size: 520px
+    &.no3
+      background: white url(../img/landing/space-3.jpg) center top no-repeat
+      background-size: 520px
+    &.no4
+      background: white url(../img/landing/space-4.jpg) center top no-repeat
+      background-size: 520px
+    &.no5
+      background: white url(../img/landing/space-5.jpg) center top no-repeat
+      background-size: 520px
+  .en
+    font-family: 'Oswald', sans-serif
+    font-size: 1.5rem
+    font-weight: 400
+  .tc
+    font-size: 1.125rem
+    font-weight: 300
+    letter-spacing: 1.5px
+  .btn
+    margin-top: 1rem
+    font-family: 'Oswald', sans-serif
+    font-size: .9rem
+    font-weight: 300
+    letter-spacing: .5px
+    border-color: rgba(255,255,255,.3)
+
+.section-3
+  background: #F7F7F7 !important
+  .title
+    margin-bottom: 3rem
+    font-size: 1.75rem !important
+    font-weight: 400 !important
+    line-height: 1.6 !important
+  .feature
+    text-align: center
+    img
+      width: 44px
+      height: 44px
+    .subtitle
+      margin: 1.5rem 0 1rem
+      font-size: 1.5rem
+      font-weight: 500
+
+.section-4
+  background: #F0F0F0 !important
+  .title
+    margin-bottom: 3rem
+    font-size: 2rem !important
+    font-weight: 400 !important
+    line-height: 1.6 !important
+  .step
+    text-align: center
+    img
+      width: 86px
+      height: 86px
+    .subtitle
+      margin: 1.5rem 0 1rem
+      font-family: 'Oswald', sans-serif
+      font-size: 1.5rem
+      font-weight: 400
+  .btn-dark
+    padding: 1rem 0 .8rem
+    margin-top: 3rem
+    width: 280px
+    font-size: 1.2rem
+
+.section-5
+  padding: 8rem 0 0
+  text-align: center
+  .title
+    margin-bottom: 4rem
+    font-size: 2rem !important
+    font-weight: 400 !important
+    line-height: 1.6 !important
+  .col
+    padding: 0
+
+.section-6
+  background: #333 url(../img/landing/contact-bg-landing.jpg) center top no-repeat !important
+  background-size: cover !important
+
+.section-7
+  padding: 0
+  background: #363E42 !important
+  #map
+    height: 360px
+  .information
+    margin-left: 2rem
+
+footer
+  padding: 3rem 0 2.5rem !important
+  color: #aaa
+  background: $bg-dark !important
+
