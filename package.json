@@ -9,13 +9,26 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.23.5",
     "gulp": "^3.9.1",
-    "gulp-compass": "^2.1.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-revm": "^1.0.2",
     "gulp-revm-collector": "^1.0.1",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "aos": "^2.2.0",
+    "bootstrap": "^4.0.0",
+    "flatpickr": "^4.2.3",
+    "jquery": "^3.3.1",
+    "jquery.easing": "^1.4.1",
+    "scrolltofixed": "^1.0.6"
   }
 }
