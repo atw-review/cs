@@ -16,7 +16,7 @@ var gulp               = require('gulp'),
 
 
 // path
-var PATH_SRC_STYLE = 'src/assets/sass/**/*.sass';
+var PATH_SRC_STYLE = 'src/assets/sass/*.sass';
 var PATH_SRC_JS    = 'src/assets/js/*.js';
 var PATH_SRC_IMG   = 'src/assets/img/**';
 var PATH_SRC_HTML  = 'src/**/*.html';
@@ -28,9 +28,17 @@ var PATH_REV_JSON  = 'rev/**/*.json';
 
 
 // gulp.task('print', function() {
-//   gulp.src(PATH_SRC_IMG)
+//   gulp.src(PATH_SRC_STYLE)
 //     .pipe(print())
 // });
+
+
+// optimize images
+gulp.task('image', function () {
+  gulp.src(PATH_SRC_IMG)
+    .pipe(imagemin())
+    .pipe(gulp.dest(PATH_DES_IMG));
+});
 
 
 gulp.task('clean-css', function() {
@@ -51,19 +59,6 @@ gulp.task('vendor-css', function() {
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest(PATH_DES_STYLE));
 });
-
-
-// gulp.task('sass', ['clean-css'], function() {
-//   return gulp.src(PATH_SRC_STYLE)
-//     .pipe(plumber())
-//     .pipe(sass({
-//       outputStyle: 'compressed'
-//     }))
-//     .pipe(autoprefixer({
-//       browsers: ['last 2 versions'],
-//       cascade: false
-//     }));
-// });
 
 
 // compile sass
@@ -123,14 +118,6 @@ gulp.task('scripts', function() {
 });
 
 
-// optimize images
-gulp.task('image', function () {
-  gulp.src(PATH_SRC_IMG)
-    .pipe(imagemin())
-    .pipe(gulp.dest(PATH_DES_IMG));
-});
-
-
 // reversion css/js deps on task [sass, scripts]
 gulp.task('rev-collector', ['compass', 'scripts'] ,function(cb) {
   gulp.src([PATH_REV_JSON, PATH_SRC_HTML])
@@ -158,8 +145,8 @@ gulp.task('browser-sync', function() {
 // watch
 gulp.task('watch',function() {
   gulp.watch([PATH_SRC_STYLE, PATH_SRC_JS, PATH_SRC_HTML], ['rev-collector']);
-  gulp.watch([PATH_SRC_IMG], ['image']);
+  // gulp.watch([PATH_SRC_IMG], ['image']);
 });
 
-// gulp.task('default', ['rev-collector', 'vendor-css', 'vendor-js', 'browser-sync', 'watch']);
-gulp.task('default', ['clean-css', 'vendor-css', 'clean-scripts', 'vendor-js', 'rev-collector', 'image', 'watch']);
+// gulp.task('default', ['rev-collector', 'vendor-css', 'vendor-js', 'browser-sync', 'image', 'watch']);
+gulp.task('default', ['image', 'clean-css', 'vendor-css', 'clean-scripts', 'vendor-js', 'rev-collector', 'watch']);
