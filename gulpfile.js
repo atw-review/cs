@@ -84,31 +84,14 @@ gulp.task('clean-scripts', function() {
 });
 
 
-var vendorjs = [
-  'node_modules/jquery/dist/jquery.slim.min.js',
-  'node_modules/popper.js/dist/umd/popper.min.js',
-  'node_modules/bootstrap/dist/js/bootstrap.min.js',
-  'node_modules/jquery.easing/jquery.easing.min.js',
-  'node_modules/aos/dist/aos.js',
-  'node_modules/scrolltofixed/jquery-scrolltofixed-min.js'
-]
-
-
-gulp.task('vendor-js', function() {
-  return gulp.src(vendorjs)
-    .pipe(concat('vendor.js'))
-    .pipe(gulp.dest(PATH_DES_JS));
-});
-
-
 // concatenate & minify JS (MD5 process)
 // gulp.task('scripts', ['clean-scripts'], function() {
 gulp.task('scripts', function() {
   return gulp.src(PATH_SRC_JS)
     .pipe(plumber())
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest(PATH_DES_JS))
-    .pipe(rename('all.min.js'))
+    // .pipe(concat('all.js'))
+    // .pipe(gulp.dest(PATH_DES_JS))
+    // .pipe(rename('all.min.js'))
     .pipe(uglify())
     .pipe(rev())
     .pipe(gulp.dest(PATH_DES_JS))
@@ -149,4 +132,4 @@ gulp.task('watch',function() {
 });
 
 // gulp.task('default', ['rev-collector', 'vendor-css', 'vendor-js', 'browser-sync', 'image', 'watch']);
-gulp.task('default', ['image', 'clean-css', 'vendor-css', 'clean-scripts', 'vendor-js', 'rev-collector', 'watch']);
+gulp.task('default', ['image', 'clean-css', 'vendor-css', 'clean-scripts', 'rev-collector', 'watch']);
