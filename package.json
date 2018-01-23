@@ -13,6 +13,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-clean": "^0.4.0",
+    "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.0.1",
     "gulp-imagemin": "^4.1.0",
@@ -26,11 +27,6 @@
   "dependencies": {
     "aos": "^2.2.0",
     "bootstrap": "^4.0.0",
-    "flatpickr": "^4.2.3",
-    "gulp-compass": "^2.1.0",
-    "jquery": "^3.3.1",
-    "jquery.easing": "^1.4.1",
-    "popper.js": "^1.12.9",
-    "scrolltofixed": "^1.0.6"
+    "flatpickr": "^4.2.3"
   }
 }
