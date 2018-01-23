@@ -1,5 +1,5 @@
 /*!
- * CHILLSPACE v1.0.0
+ * CHILLSPACE v1.0.1
  * Copyright ***
  * Licensed under ***
  */
@@ -28,20 +28,6 @@ $(document).ready(function() {
     easing: 'ease-in-out-sine',
     delay: 100
   });
-
-  // google map
-  // var myLatlng = new google.maps.LatLng(25.051094, 121.5928083);
-  // var mapOptions = {
-  //   zoom: 17,
-  //   center: myLatlng,
-  // }
-  // var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-  // var marker = new google.maps.Marker({
-  //     position: myLatlng,
-  //     title:"EUREKARE"
-  // });
-  // To add the marker to the map, call setMap();
-  // marker.setMap(map);
 
   // weekly schedule
   var settings = {
