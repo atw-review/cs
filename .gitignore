@@ -60,5 +60,4 @@ typings/
 # chillspace
 .sass-cache/
 *.css.map
-config.rb
 public/include/

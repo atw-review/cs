@@ -1,1 +1,0 @@
-$(document).ready(function(){var e=new google.maps.LatLng(25.051094,121.5928083),o={zoom:17,center:e};new google.maps.Map(document.getElementById("map"),o),new google.maps.Marker({position:e,title:"CHILLSPACE"})});

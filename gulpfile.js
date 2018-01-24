@@ -50,6 +50,7 @@ gulp.task('clean-css', function() {
 var vendorcss = [
   'node_modules/bootstrap/dist/css/bootstrap.min.css',
   'node_modules/aos/dist/aos.css',
+  'node_modules/lity/dist/lity.min.css',
   'node_modules/flatpickr/dist/flatpickr.min.css'
 ]
 
@@ -132,4 +133,4 @@ gulp.task('watch',function() {
 });
 
 // gulp.task('default', ['rev-collector', 'vendor-css', 'vendor-js', 'browser-sync', 'image', 'watch']);
-gulp.task('default', ['image', 'clean-css', 'vendor-css', 'clean-scripts', 'rev-collector', 'watch']);
+gulp.task('default', ['image', 'clean-css', 'vendor-css', 'clean-scripts', 'rev-collector', 'browser-sync', 'watch']);

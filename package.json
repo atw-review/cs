@@ -27,6 +27,7 @@
   "dependencies": {
     "aos": "^2.2.0",
     "bootstrap": "^4.0.0",
-    "flatpickr": "^4.2.3"
+    "flatpickr": "^4.2.3",
+    "lity": "^2.3.0"
   }
 }
