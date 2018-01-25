@@ -1,4 +1,5 @@
 @import _chillspace-variables
+@import _common
 
 body
   position: relative
@@ -13,56 +14,6 @@ body
   +bp(md)
     font-size: 1rem
     line-height: 1.64
-
-.navbar.main-nav
-  position: absolute
-  top: 0
-  left: 0
-  z-index: 99
-  width: 100%
-  padding: 40px 50px
-  background: transparent
-  +transition (all .5s ease 0s)
-  &.navbar-expand
-    -ms-flex-flow: row nowrap
-    flex-flow: row nowrap
-    -ms-flex-pack: start
-    justify-content: flex-start
-  .navbar-brand
-    padding: 0
-    margin: 0
-    img
-      width: 85px
-      +transition (all .5s ease 0s)
-  .nav-item
-    margin: 0 1.5rem
-    &:last-child
-      margin-right: 0
-    &.active
-      border-bottom: 2px solid rgba($white,.85)
-    .nav-link
-      padding: .4rem 0
-      margin-top: -6px
-      font-size: .9rem
-      font-weight: 300
-      color: rgba($white,.85)
-      letter-spacing: .5px
-  &.nav-sticky-top
-    position: fixed
-    top: 0
-    left: 0
-    z-index: 999
-    width: 100%
-    padding: 15px 50px
-    &.bg-faded
-      background: #333
-      box-shadow: 0 0 20px rgba(0,0,0,.1)
-      // +animation(fadeInDown .3s ease-out forwardsss)
-    .navbar-brand
-      img
-        width: 56px
-    .nav-link
-      padding: .3rem 0
 
 header
   width: 100%
@@ -81,8 +32,10 @@ header
     background: rgba(0,0,0,.3)
   hgroup
     z-index: 1
-    margin-top: 3rem
+    margin-top: 2rem
     color: $white
+    +bp(md)
+      margin-top: 3rem
   h1
     margin: 0 0 1rem
     font-size: 2rem
@@ -192,9 +145,9 @@ section
     +bp(lg)
       padding: 6.5rem 0 0
       height: 520px
-    // 好運家景A
-    &.no1
-      background: image-url("landing/space-1.jpg") no-repeat
+    // 好運5樓大區
+    &.chill-house-l
+      background: image-url("landing/space-chill-house-l.jpg") no-repeat
       background-position: center center
       background-size: 578px
       +bp(sm)
@@ -204,9 +157,9 @@ section
       +bp(lg)
         background-position: center top
         background-size: 520px
-    // 好運家景B
-    &.no2
-      background: image-url("landing/space-2.jpg") no-repeat
+    // 好運5樓小區
+    &.chill-house-s
+      background: image-url("landing/space-chill-house-s.jpg") no-repeat
       background-position: center center
       background-size: 578px
       +bp(sm)
@@ -217,8 +170,8 @@ section
         background-position: center top
         background-size: 520px
     // 好運辦公室
-    &.no3
-      background: image-url("landing/space-3.jpg") no-repeat
+    &.chill-ffice
+      background: image-url("landing/space-chill-ffice.jpg") no-repeat
       background-position: center center
       background-size: 578px
       +bp(sm)
@@ -229,8 +182,8 @@ section
         background-position: center top
         background-size: 520px
     // 好運酒吧
-    &.no4
-      background: image-url("landing/space-4.jpg") no-repeat
+    &.chill-bar
+      background: image-url("landing/space-chill-bar.jpg") no-repeat
       background-position: center center
       background-size: 578px
       +bp(sm)
@@ -241,8 +194,8 @@ section
         background-position: center top
         background-size: 520px
     // 好運空間
-    &.no5
-      background: image-url("landing/space-5.jpg") no-repeat
+    &.chill-space
+      background: image-url("landing/space-chill-space.jpg") no-repeat
       background-position: center center
       background-size: 578px
       +bp(sm)
@@ -377,4 +330,4 @@ section
 
 footer
   color: $text-light-darken
-  background: #363E42 !important
+  background: #222 !important

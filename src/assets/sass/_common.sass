@@ -1,0 +1,99 @@
+@import _chillspace-variables
+
+html, body
+  height: 100%
+
+html *
+  // text-rendering: auto
+  // -webkit-font-smoothing: antialiased
+  // -moz-osx-font-smoothing: grayscale
+
+body.desktop-only
+  header, nav, section, footer
+    min-width: $site-min-width
+  .container
+    width: $content-min-width
+    max-width: none !important
+    padding-right: 20px
+    padding-left: 20px
+
+a:focus
+  outline: none !important
+
+.btn,
+.form-control,
+button
+  height: auto !important
+  padding: 1rem 2rem
+  line-height: 1
+  border-radius: 0
+  &:disabled
+    cursor: not-allowed
+
+.btn:focus,
+.btn.focus,
+.form-control:focus,
+.form-control.focus
+  box-shadow: none !important
+
+.navbar.main-nav
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 99
+  width: 100%
+  padding: 20px
+  background: transparent
+  +transition (all .5s ease 0s)
+  +bp(md)
+    padding: 40px 50px
+  &.navbar-expand
+    -ms-flex-flow: row nowrap
+    flex-flow: row nowrap
+    -ms-flex-pack: start
+    justify-content: flex-start
+  .navbar-brand
+    padding: 0
+    margin: 0
+    img
+      width: 50px
+      +transition (all .5s ease 0s)
+      +bp(md)
+        width: 85px
+  .nav-item
+    margin: 0 1.5rem
+    &:last-child
+      margin-right: 0
+    &.active
+      border-bottom: 2px solid rgba($white, .85)
+    .nav-link
+      padding: .4rem 0
+      margin-top: -6px
+      font-size: .9rem
+      font-weight: 300
+      color: rgba($white, .85)
+      letter-spacing: .5px
+  &.nav-sticky-top
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 999
+    width: 100%
+    padding: 15px
+    +bp(md)
+      padding: 15px 50px
+    &.bg-faded
+      background: $bg-gray
+      box-shadow: 0 0 20px rgba(0,0,0,.1)
+      +animation(fadeInDown .3s ease-out forwardsss)
+    .navbar-brand
+      img
+        width: 56px
+    .nav-link
+      padding: .3rem 0
+      margin-top: .2rem
+
+footer
+  padding: 2rem 0
+  font-size: .85rem
+  text-align: center

@@ -24,17 +24,21 @@
 
     <!-- style -->
     <link rel="stylesheet" href="assets/css/vendor.css">
-    <link rel="stylesheet" href="assets/css/landing.css?v=0efd23deeb">
+    <link rel="stylesheet" href="assets/css/landing.css?v=3e229498a5">
     <!-- tracking code (GA/GTM/FB Pixel) -->
     <!-- old ver IE -->
   </head>
   <body>
-    <nav class="navbar navbar-expand navbar-dark bg-faded main-nav">
+    <nav class="navbar navbar-expand-md navbar-dark bg-faded main-nav">
       <div class="container">
         <a class="navbar-brand" href="#top">
-          <img src="assets/img/landing/chillspace-logo.png" alt="CHILL SPACE 好運空間">
+          <img class="d-block d-md-none" src="assets/img/common/chillspace-logo-m.png" alt="CHILL SPACE 好運空間">
+          <img class="d-none d-md-block" src="assets/img/common/chillspace-logo.png" alt="CHILL SPACE 好運空間">
         </a>
-        <div class="collapse navbar-collapse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">好運空間</a>
@@ -43,7 +47,7 @@
               <a class="nav-link" href="#">好得文旅</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">聯絡我們</a>
+              <a class="nav-link" href="#contact">聯絡我們</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">會員中心</a>
@@ -87,27 +91,27 @@
      <section id="section-spaces" class="step section-bg-dark section-spaces">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12 col-lg space-wrapper no4" data-aos="fade-up" data-aos-delay="0">
+          <div class="col-12 col-lg space-wrapper chill-bar" data-aos="fade-up" data-aos-delay="0">
             <div class="en">CHILL BAR</div>
             <div class="tc">好運酒吧</div>
             <a class="btn btn-outline-light" href="#">VIEW MORE</a>
           </div>
-          <div class="col-12 col-lg space-wrapper no3" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-12 col-lg space-wrapper chill-ffice" data-aos="fade-up" data-aos-delay="300">
             <div class="en">CHILL OFFICE</div>
             <div class="tc">好運辦公室</div>
             <a class="btn btn-outline-light" href="#">VIEW MORE</a>
           </div>
-          <div class="col-12 col-lg space-wrapper no1" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-12 col-lg space-wrapper chill-house-l" data-aos="fade-up" data-aos-delay="600">
             <div class="en">CHILL HOUSE</div>
-            <div class="tc">好運家景A</div>
+            <div class="tc">好運家景(大)</div>
             <a class="btn btn-outline-light" href="#">VIEW MORE</a>
           </div>
-          <div class="col-12 col-lg space-wrapper no2" data-aos="fade-up" data-aos-delay="900">
+          <div class="col-12 col-lg space-wrapper chill-house-s" data-aos="fade-up" data-aos-delay="900">
             <div class="en">CHILL HOUSE</div>
-            <div class="tc">好運家景B</div>
+            <div class="tc">好運家景(小)</div>
             <a class="btn btn-outline-light" href="#">VIEW MORE</a>
           </div>
-          <div class="col-12 col-lg space-wrapper no5" data-aos="fade-up" data-aos-delay="1200">
+          <div class="col-12 col-lg space-wrapper chill-space" data-aos="fade-up" data-aos-delay="1200">
             <div class="en">CHILL SPACE</div>
             <div class="tc">好運空間</div>
             <a class="btn btn-outline-light" href="#">VIEW MORE</a>
@@ -235,8 +239,8 @@
     <section id="section-videos" class="step section-bg-dark text-light section-videos">
       <div class="container-fluid">
         <div class="section-title-group double">
-          <h3 class="title">好運質感 精彩呈現</h3>
-          <h4 class="subtitle">一眼愛上 家的感覺</h4>
+          <h3 class="title">好運質感 盡收眼底</h3>
+          <h4 class="subtitle">精彩呈現家的感覺</h4>
         </div>
         <div class="row justify-content-center">
           <div class="col-12 col-md video-wrapper">
@@ -261,7 +265,7 @@
     <section id="section-contact" class="step section-bg-dark text-light section-contact">
       <div class="container">
         <div class="section-title-group single">
-          <h3 class="title">聯絡好運</h3>
+          <h3 class="title">聯絡我們</h3>
         </div>
         <div class="row justify-content-center">
           <div class="col col-lg-8">
@@ -317,8 +321,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollToFixed/1.0.8/jquery-scrolltofixed-min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQXasoBdynfpVH7F6ShBHz8EbyihYbBDY"></script>
     <script src="https://use.fontawesome.com/671784308d.js"></script>
 
-    <script src="assets/js/landing.js?v=1b1797f39e"></script>
+    <script src="assets/js/landing.js?v=75110cadfe"></script>
   </body>
 </html>
