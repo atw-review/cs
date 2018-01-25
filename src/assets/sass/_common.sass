@@ -60,19 +60,26 @@ button
       +transition (all .5s ease 0s)
       +bp(md)
         width: 85px
+  .navbar-toggler
+    font-size: 1rem
   .nav-item
     margin: 0 1.5rem
-    &:last-child
-      margin-right: 0
-    &.active
-      border-bottom: 2px solid rgba($white, .85)
+    +bp(md)
+      &:last-child
+        margin-right: 0
+      &.active
+        border-bottom: 2px solid rgba($white, .85)
     .nav-link
-      padding: .4rem 0
-      margin-top: -6px
+      padding: 1rem 0
       font-size: .9rem
       font-weight: 300
-      color: rgba($white, .85)
       letter-spacing: .5px
+      color: rgba($white, .85)
+      text-align: center
+      +bp(md)
+        padding: .4rem 0
+        margin-top: -6px
+        text-align: left
   &.nav-sticky-top
     position: fixed
     top: 0
@@ -90,8 +97,20 @@ button
       img
         width: 56px
     .nav-link
-      padding: .3rem 0
-      margin-top: .2rem
+      padding: 1rem 0
+      font-size: .9rem
+      font-weight: 300
+      letter-spacing: .5px
+      color: rgba($white, .85)
+      text-align: center
+      +bp(md)
+        padding: .3rem 0
+        margin-top: .2rem
+        text-align: left
+
+.nav-bg-dark
+  background: $bg-gray !important
+  box-shadow: 0 0 15px rgba(0,0,0,.1)
 
 footer
   padding: 2rem 0

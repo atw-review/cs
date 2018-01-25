@@ -13,13 +13,25 @@ $(document).on('scroll', function () {
   }
 });
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
   // aos animation
   AOS.init({
     duration: 600,
     easing: 'ease-in-out-sine',
     delay: 100,
     disable: 'mobile'
+  });
+
+  // toggle nav change bgcolor
+  $('.navbar-collapse').on('show.bs.collapse', function() {
+    $('.navbar').addClass('nav-bg-dark');
+  }).on('hidden.bs.collapse', function() {
+    $('.navbar').removeClass('nav-bg-dark');
+  });
+
+  // collapse nav after click
+  $('.navbar-nav>li>a').on('click', function() {
+    $('.navbar-collapse').collapse('hide');
   });
 
   // google map
