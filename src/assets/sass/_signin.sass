@@ -8,7 +8,7 @@ body.page-singin
   background: $bg-dark image-url("common/bg-signin.jpg") left top no-repeat
   background-size: cover
   section
-    padding: 5rem 0
+    padding: 5rem 0 2rem
   h1.title
     margin-bottom: .6rem
     font-family: 'Oswald', sans-serif
@@ -27,19 +27,27 @@ body.page-singin
   form
     margin-top: 4rem
   .form-group
-    margin-bottom: 1.5rem
-    input.form-control
-      padding: .5rem .2rem
-      color: $text-light-lighten
-      background: transparent
-      border: none
-      border-bottom: 1px solid rgba($border-primary, .5)
-      +input-placeholder
-        color: $text-light-darken
-    &:nth-child(2)
-      margin-bottom: 3rem
+    margin: 1.5rem 0 0 0
+    &:first-child
+      margin: 0
+  .form-row
+    margin: 1.5rem 0 0 0
+    > .col
+      padding: 0 15px 0 0
+      &:last-child
+        padding: 0
+  input.form-control
+    padding: .5rem .2rem
+    color: $text-light-lighten
+    background: transparent
+    border: none
+    border-bottom: 1px solid rgba($border-primary, .5)
+    +input-placeholder
+      color: $text-light-darken
+  .btn-wrap
+    margin-top: 2rem
   .subfeatures
-    margin: 0 0 .3rem
+    margin: 0 0 .5rem
     line-height: 1.6
     color: $text-primary
     text-decoration: none
@@ -51,7 +59,7 @@ body.page-singin
         opacity: 0
     .form-check-label
       width: 100%
-      padding-left: 24px
+      padding-left: 5px
       +user-select(none)
       &::before,
       &::after
@@ -85,7 +93,7 @@ body.page-singin
       color: $text-light-darken
       opacity: .8
     &.hint
-      margin: 1.5rem 0 .2rem
+      margin: 1.5rem 0 0
       color: $text-light-darken
   footer
     color: $text-light-darken
