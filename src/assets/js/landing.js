@@ -4,24 +4,7 @@
  * Licensed under ***
  */
 
-// sticky header
-$(document).on('scroll', function () {
-  if($(document).scrollTop() > 600) {
-    $('.main-nav').addClass('nav-sticky-top');
-  } else {
-    $('.main-nav').removeClass('nav-sticky-top');
-  }
-});
-
-jQuery(document).ready(function($) {
-  // aos animation
-  AOS.init({
-    duration: 600,
-    easing: 'ease-in-out-sine',
-    delay: 100,
-    disable: 'mobile'
-  });
-
+$(document).ready(function() {
   // toggle nav change bgcolor
   $('.navbar-collapse').on('show.bs.collapse', function() {
     $('.navbar').addClass('nav-bg-dark');

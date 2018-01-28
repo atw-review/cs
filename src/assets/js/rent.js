@@ -4,29 +4,10 @@
  * Licensed under ***
  */
 
-// sticky header
-$(document).on('scroll', function () {
-  if($(document).scrollTop() > 600) {
-    $('.main-nav').addClass('nav-sticky-top');
-  } else {
-    $('.main-nav').removeClass('nav-sticky-top');
-  }
-});
-
 $(document).ready(function() {
-  // props filter
-  $('#props-filter').scrollToFixed({ marginTop: 100 });
-
   // flatpickr
   $(".date-picker").flatpickr({
     inline: true
-  });
-
-  // aos animation
-  AOS.init({
-    duration: 600,
-    easing: 'ease-in-out-sine',
-    delay: 100
   });
 
   // weekly schedule

@@ -1,6 +1,7 @@
 {
-  "landing.js": "landing.js?v=7ad7517495",
-  "main.js": "main.js?v=d1830c2078",
+  "common.js": "common.js?v=eb3c8aca2a",
+  "landing.js": "landing.js?v=2c2738daa4",
+  "rent.js": "rent.js?v=996836c4fd",
   "side-shopping-cart.js": "side-shopping-cart.js?v=b1d3520bc7",
   "weekly-schedule.js": "weekly-schedule.js?v=53b7b0cbb6"
 }

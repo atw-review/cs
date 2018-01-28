@@ -1,0 +1,96 @@
+@import _chillspace-variables
+
+.page-account
+  header
+    width: 100%
+    height: 300px
+    text-align: center
+    background: white image-url("common/bg-account-header.jpg") center center no-repeat
+    background-size: cover
+    &.overlay::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: inherit
+      min-width: inherit
+      height: inherit
+      background: rgba($black, .3)
+    h1
+      margin: 0
+      font-size: 2.5rem
+  section
+    padding: 5rem 0 7rem
+
+.account-sidebar
+  .list-group-item
+    background: transparent
+    border: none
+    border-radius: 0
+    &:hover
+      text-decoration: underline
+    &.active
+      color: $text-primary
+      &:hover
+        text-decoration: none
+
+.settings
+  .title
+    margin-bottom: 1.5rem
+  .subtitle
+    margin-top: 1.5rem
+    margin-bottom: 1rem
+    font-size: 1.2rem
+    font-weight: 500
+  p
+    margin: 0
+
+form.account-form
+  width: 100%
+  label
+    font-size: .9rem
+    color: $text-primary-darken
+  input.form-control
+    padding: 1.1rem 1.2rem 1rem
+    background: transparent
+    border: 1px solid rgba($border-primary, .5)
+  button
+    margin-top: 2rem
+
+table.order-detail
+  .item-img
+    width: 60px
+    height: 60px
+  thead
+    tr
+      th
+        padding: .5rem .75rem .4rem
+        font-weight: 500
+  thead, tbody
+    tr
+      th, td
+        &:nth-child(1),
+        &:nth-child(2)
+          width: 1%
+        &:nth-child(4)
+          width: 100px
+          text-align: right
+        &:nth-child(5)
+          width: 80px
+          text-align: right
+        &:nth-child(6)
+          width: 100px
+          text-align: right
+
+.table-hover
+  tbody tr
+    &:hover
+      background: rgba($bg-gold, .2)
+
+.order-total
+  padding: .75rem
+  text-align: right
+  .price
+    margin-left: .5rem
+    font-size: 1.6rem
+    font-weight: 600
