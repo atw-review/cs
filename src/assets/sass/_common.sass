@@ -60,7 +60,7 @@ button
     padding: 0
     margin: 0
     img
-      width: 50px
+      width: 110px
       +transition (all .5s ease 0s)
       +bp(md)
         width: 85px
@@ -92,14 +92,16 @@ button
     width: 100%
     padding: 15px
     +bp(md)
-      padding: 15px 50px
+      padding: 13px 50px 11px
     &.bg-faded
       background: $bg-gray
       box-shadow: 0 0 20px rgba(0,0,0,.1)
       +animation(fadeInDown .3s ease-out forwardsss)
     .navbar-brand
       img
-        width: 56px
+        width: 110px
+        +bp(md)
+          width: 56px
     .nav-link
       padding: 1rem 0
       font-size: .9rem
@@ -108,8 +110,8 @@ button
       color: rgba($white, .85)
       text-align: center
       +bp(md)
-        padding: .3rem 0
-        margin-top: .2rem
+        padding: .3rem 0 .2rem
+        margin-top: .1rem
         text-align: left
 
 .nav-bg-dark
