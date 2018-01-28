@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-faded main-nav">
       <div class="container">
-        <a class="navbar-brand" href="#top">
+        <a class="navbar-brand" href="./../">
           <img class="d-block d-md-none" src="./../assets/img/common/chillspace-logo-m.png" alt="CHILL SPACE 好運空間">
           <img class="d-none d-md-block" src="./../assets/img/common/chillspace-logo.png" alt="CHILL SPACE 好運空間">
         </a>
@@ -18,8 +18,19 @@
             <li class="nav-item">
               <a class="nav-link" href="./../index.html#contact">聯絡我們</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./../account/">會員中心</a>
+            <!-- 登入前 -->
+            <!-- <li class="nav-item d-none d-md-block">
+              <a class="nav-link" href="./../signin.html">會員專區</a>
+            </li> -->
+            <!-- 登入後 -->
+            <li class="nav-item d-none d-md-block dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">會員專區</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./../account/">會員資料</a>
+                <a class="dropdown-item" href="./../account/order.html">訂單明細</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">登出</a>
+              </div>
             </li>
           </ul>
         </div>
