@@ -53,8 +53,7 @@ var vendorcss = [
   'node_modules/aos/dist/aos.css',
   'node_modules/lity/dist/lity.min.css',
   'node_modules/flatpickr/dist/flatpickr.min.css',
-  'node_modules/photoswipe/dist/photoswipe.css',
-  'node_modules/photoswipe/dist/default-skin/default-skin.css'
+  'node_modules/photoswipe/dist/photoswipe.css'
 ]
 
 
