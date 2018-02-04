@@ -16,7 +16,8 @@ var gulp               = require('gulp'),
 
 
 // path
-var PATH_SRC_STYLE = 'src/assets/sass/*.sass';
+var PATH_SRC_SASS  = 'src/assets/sass/*.sass';
+var PATH_SRC_CSS   = 'src/assets/css/**';
 var PATH_SRC_JS    = 'src/assets/js/*.js';
 var PATH_SRC_IMG   = 'src/assets/img/**';
 var PATH_SRC_HTML  = 'src/**/*.html';
@@ -28,13 +29,13 @@ var PATH_REV_JSON  = 'rev/**/*.json';
 
 
 // gulp.task('print', function() {
-//   gulp.src(PATH_SRC_STYLE)
+//   gulp.src(PATH_SRC_SASS)
 //     .pipe(print())
 // });
 
 
 // optimize images
-gulp.task('image', function () {
+gulp.task('img', function () {
   gulp.src(PATH_SRC_IMG)
     .pipe(imagemin())
     .pipe(gulp.dest(PATH_DES_IMG));
@@ -51,7 +52,9 @@ var vendorcss = [
   'node_modules/bootstrap/dist/css/bootstrap.min.css',
   'node_modules/aos/dist/aos.css',
   'node_modules/lity/dist/lity.min.css',
-  'node_modules/flatpickr/dist/flatpickr.min.css'
+  'node_modules/flatpickr/dist/flatpickr.min.css',
+  'node_modules/photoswipe/dist/photoswipe.css',
+  'node_modules/photoswipe/dist/default-skin/default-skin.css'
 ]
 
 
@@ -62,10 +65,17 @@ gulp.task('vendor-css', function() {
 });
 
 
+gulp.task('vendor-css-img', function() {
+  gulp.src(PATH_SRC_CSS)
+    .pipe(imagemin())
+    .pipe(gulp.dest(PATH_DES_STYLE));
+});
+
+
 // compile sass
 // gulp.task('compass', ['clean-css'], function() {
 gulp.task('compass', function() {
-  gulp.src(PATH_SRC_STYLE)
+  gulp.src(PATH_SRC_SASS)
     .pipe(plumber())
     .pipe(compass({
       config_file: 'config.rb',
@@ -128,9 +138,9 @@ gulp.task('browser-sync', function() {
 
 // watch
 gulp.task('watch',function() {
-  gulp.watch([PATH_SRC_STYLE, PATH_SRC_JS, PATH_SRC_HTML], ['rev-collector']);
-  // gulp.watch([PATH_SRC_IMG], ['image']);
+  gulp.watch([PATH_SRC_SASS, PATH_SRC_JS, PATH_SRC_HTML], ['rev-collector']);
+  // gulp.watch([PATH_SRC_IMG], ['img']);
 });
 
-// gulp.task('default', ['rev-collector', 'vendor-css', 'vendor-js', 'browser-sync', 'image', 'watch']);
-gulp.task('default', ['image', 'clean-css', 'vendor-css', 'clean-scripts', 'rev-collector', 'browser-sync', 'watch']);
+// gulp.task('default', ['rev-collector', 'vendor-css', 'vendor-js', 'browser-sync', 'img', 'watch']);
+gulp.task('default', ['img', 'clean-css', 'vendor-css', 'vendor-css-img', 'clean-scripts', 'rev-collector', 'browser-sync', 'watch']);
