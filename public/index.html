@@ -24,7 +24,7 @@
 
     <!-- style -->
     <link rel="stylesheet" href="assets/css/vendor.css">
-    <link rel="stylesheet" href="assets/css/landing.css?v=6493611385">
+    <link rel="stylesheet" href="assets/css/landing.css?v=977f75984b">
     <!-- tracking code (GA/GTM/FB Pixel) -->
     <!-- old ver IE -->
   </head>
@@ -40,8 +40,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./../">好運空間</a>
+            <li class="nav-item">
+              <a class="nav-link" href="./../rent.html">好運空間</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./../props.html">好運道俱</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" target="_blank">好得文旅</a>
@@ -105,27 +108,27 @@
           <div class="col-12 col-lg space-wrapper chill-bar" data-aos="fade-up" data-aos-delay="0">
             <div class="en">CHILL BAR</div>
             <div class="tc">好運吧台</div>
-            <a class="btn btn-outline-light" href="#">VIEW MORE</a>
+            <!-- <a class="btn btn-outline-light" href="#">VIEW MORE</a> -->
           </div>
           <div class="col-12 col-lg space-wrapper chill-office" data-aos="fade-up" data-aos-delay="300">
             <div class="en">CHILL OFFICE</div>
             <div class="tc">好運辦公室</div>
-            <a class="btn btn-outline-light" href="#">VIEW MORE</a>
+            <!-- <a class="btn btn-outline-light" href="#">VIEW MORE</a> -->
           </div>
           <div class="col-12 col-lg space-wrapper chill-house-l" data-aos="fade-up" data-aos-delay="600">
             <div class="en">CHILL HOUSE</div>
             <div class="tc">好運家景(大)</div>
-            <a class="btn btn-outline-light" href="#">VIEW MORE</a>
+            <!-- <a class="btn btn-outline-light" href="#">VIEW MORE</a> -->
           </div>
           <div class="col-12 col-lg space-wrapper chill-house-s" data-aos="fade-up" data-aos-delay="900">
             <div class="en">CHILL HOUSE</div>
             <div class="tc">好運家景(小)</div>
-            <a class="btn btn-outline-light" href="#">VIEW MORE</a>
+            <!-- <a class="btn btn-outline-light" href="#">VIEW MORE</a> -->
           </div>
           <div class="col-12 col-lg space-wrapper chill-space" data-aos="fade-up" data-aos-delay="1200">
             <div class="en">CHILL SPACE</div>
             <div class="tc">好運空間</div>
-            <a class="btn btn-outline-light" href="#">VIEW MORE</a>
+            <!-- <a class="btn btn-outline-light" href="#">VIEW MORE</a> -->
           </div>
         </div>
       </div>
@@ -247,28 +250,59 @@
       </div>
     </section>
 
-    <section id="videos" class="step section-bg-dark text-light section-videos">
+    <section id="gallery" class="step section-bg-dark text-light section-gallery">
       <div class="container-fluid">
         <div class="section-title-group double">
           <h3 class="title">好運質感 盡收眼底</h3>
           <h4 class="subtitle">精彩呈現家的感覺</h4>
         </div>
         <div class="row justify-content-center">
-          <div class="col-12 col-md video-wrapper">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2m24E0t_SZk?rel=0" allowfullscreen></iframe>
+          <!-- PhotoSwipe -->
+          <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+              <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+              </div>
+              <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                  <div class="pswp__counter"></div>
+                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                  <button class="pswp__button pswp__button--share" title="Share"></button>
+                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                  <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                  <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                  <div class="pswp__caption__center"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-md video-wrapper">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Tmg3WA07XaQ?rel=0" allowfullscreen></iframe>
+          <!-- /.pswp -->
+          <!-- <div class="col-md-10">
+            <div class="my-gallery">
+              <figure itemprop="associatedMedia">
+                <a href="https://i1.wp.com/ponpai.tw/wp-content/uploads/2017/08/HILL.jpg" itemprop="contentUrl" data-size="1024x1024">
+                  <img src="https://i1.wp.com/ponpai.tw/wp-content/uploads/2017/08/HILL.jpg" itemprop="thumbnail" alt="Image description">
+                </a>
+                <figcaption itemprop="caption description">Image caption  1</figcaption>
+              </figure>
             </div>
-          </div>
-          <div class="col-12 col-md video-wrapper">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qxUM3M92xWQ?rel=0" allowfullscreen></iframe>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -331,11 +365,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollToFixed/1.0.8/jquery-scrolltofixed-min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQXasoBdynfpVH7F6ShBHz8EbyihYbBDY"></script>
     <script src="https://use.fontawesome.com/671784308d.js"></script>
 
     <script src="assets/js/common.js?v=eb3c8aca2a"></script>
-    <script src="assets/js/landing.js?v=2c2738daa4"></script>
+    <script src="assets/js/landing.js?v=e1d2a0ddfb"></script>
   </body>
 </html>
