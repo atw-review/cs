@@ -287,7 +287,7 @@ section
 .section-gallery
   text-align: center
 
-.my-gallery
+.chill-space-gallery
   width: 100%
   float: left
   img
@@ -296,10 +296,21 @@ section
   figure
     display: block
     float: left
-    margin: 0 5px 5px 0
-    width: 150px
+    margin: 0 3% 6% 3%
+    width: 44%
+    +bp(md)
+      margin: 0 1% 2% 1%
+      width: 23%
+    +bp(lg)
+      width: 18%
   figcaption
     display: none
+
+.pswp__button
+  height: 44px !important
+
+.pswp__caption__center
+  text-align: center
 
 .section-contact
   background: #333 image-url("landing/bg-landing-contact.jpg") center top no-repeat !important
