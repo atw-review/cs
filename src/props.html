@@ -15,7 +15,7 @@
     @@include('include/_navbar.html')
     <header class="d-flex justify-content-center align-items-center overlay">
       <hgroup>
-        <h1>好運空間租賃</h1>
+        <h1>好運道具租賃</h1>
         <h2>方便快速的一站式服務</h2>
       </hgroup>
     </header>
@@ -25,7 +25,7 @@
       <div class="container">
         <div class="section-title-group">
           <h4 class="subtitle">STEP 1</h4>
-          <h3 class="title">選擇拍攝時段</h3>
+          <h3 class="title">選擇租用時段</h3>
         </div>
         <div class="row">
           <div class="col-md-9">
@@ -44,78 +44,6 @@
               <li class="list-group-item">結束：02/21 (三) 09:00</li>
               <li class="list-group-item">共計<span class="font-weight-bold">24</span>小時</li>
             </ul>
-          </div>
-          <div class="w-100"></div>
-          <div class="col text-center">
-            <div class="btn-group next-step">
-              <a class="btn btn-outline-secondary" href="#">下一步，選擇場景</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- step 2 -->
-    <section id="step-2" class="step section-bg-dark">
-      <div class="container">
-        <div class="section-title-group">
-          <h4 class="subtitle">STEP 2</h4>
-          <h3 class="title">選擇場景</h3>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <a class="" href="#spaceModal-0001" data-toggle="modal" data-target="#spaceModal-0001">
-              <div class="card">
-                <img class="card-img" src="assets/img/rent/spaces/space-01-main.jpg" alt="好運家景 (大區)">
-                <div class="card-img-overlay d-flex justify-content-center">
-                  <div class="align-self-center text-center">
-                    <h4 class="card-title">CHILL HOUSE</h4>
-                    <p class="card-subtitle">好運家景 (大區)</p>
-                  </div>
-                  <p class="card-text available-time">最快 01/17 (三) 22:00 可租用</p>
-                  <!-- <p class="card-text available-time now">即可租用</p> -->
-                </div>
-              </div>
-            </a>
-          </div><!-- /.space -->
-          <div class="w-100"></div>
-          <div class="col text-center">
-            <div class="btn-group next-step">
-              <a class="btn btn-outline-secondary" href="#">下一步，選擇風格佈景</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- step 3 -->
-    <section id="step-3" class="step section-bg-dark">
-      <div class="container">
-        <div class="section-title-group">
-          <h4 class="subtitle">STEP 3</h4>
-          <h3 class="title">選擇風格佈景</h3>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <a href="#backdropModal-0001" data-toggle="modal" data-target="#backdropModal-0001">
-              <div class="card">
-                <img class="card-img" src="https://placem.at/place?w=1800&h=1200" alt="佈景名稱">
-                <div class="card-img-overlay d-flex justify-content-center">
-                  <div class="align-self-center text-center">
-                    <h4 class="card-title">TITLE</h4>
-                    <p class="card-subtitle">佈景名稱</p>
-                  </div>
-                  <!-- <p class="card-text available-time">最快 01/17 (三) 22:00 可租用</p> -->
-                  <p class="card-text available-time now">即可租用</p>
-                </div>
-              </div>
-            </a>
-          </div><!-- /.backdrop -->
-          <div class="w-100"></div>
-          <div class="col text-center">
-            <div class="btn-group next-step">
-              <a class="btn btn-outline-secondary" href="#">下一步，選擇道具</a>
-            </div>
           </div>
         </div>
       </div>
@@ -385,55 +313,6 @@
               <form class="d-flex form-inline align-items-end" action="">
                 <button class="btn btn-primary btn-add-to-cart" type="submit" disabled>最快 01/17 (三) 15:00 可租用</button>
                 <!-- <button class="btn btn-primary btn-add-to-cart" type="submit">加入清單<span class="subtotal">(10小時 / $65,000)</span></button> -->
-                <a class="btn btn-download-modal" href="#">下載模組</a>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- modal (backdrop) -->
-    <div id="backdropModal-0001" class="modal rental-modal backdrop fade" tabindex="-1" role="dialog" aria-labelledby="backdropModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content flex-row">
-          <div class="modal-img">
-            <img class="img-fluid" src="https://placem.at/place?w=1800&h=1200" alt="佈景名稱">
-          </div>
-          <div class="modal-detail d-flex flex-column">
-            <div class="modal-header">
-              <h4 class="item-title text-truncate">佈景名稱</h4>
-              <h5 class="item-price"><span class="currency">$</span>3,500<span class="unit">/&nbsp;小時</span></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <ul id="spaceTab" class="nav nav-tabs" role="tablist">
-                <li class="nav-item">
-                  <a id="space-feature-tab" class="nav-link active" data-toggle="tab" href="#spaceFeature" role="tab" aria-controls="spaceFeature" aria-selected="true">簡介</a>
-                </li>
-                <li class="nav-item">
-                  <a id="space-detail-tab" class="nav-link" data-toggle="tab" href="#spaceDetail" role="tab" aria-controls="spaceDetail" aria-selected="false">規格</a>
-                </li>
-              </ul>
-              <div id="spaceTabContent" class="tab-content">
-                <div id="spaceFeature" class="tab-pane fade show active" role="tabpanel" aria-labelledby="space-feature-tab">
-                  <p class="tab-text">
-                    由於目前沒有佈景照片、金額等資訊，因此頁面上都是假資訊
-                  </p>
-                </div>
-                <div id="spaceDetail" class="tab-pane fade" role="tabpanel" aria-labelledby="space-detail-tab">
-                  <p class="tab-text">
-                    坪數：11<br>
-                    傢俱：椅子 (3)、桌子 (1)、軌道燈 (1)、沙發 (1)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer mt-auto">
-              <form class="d-flex form-inline align-items-end" action="">
-                <button class="btn btn-primary btn-add-to-cart" type="submit">加入清單<span class="subtotal">(10小時 / $35,000)</span></button>
                 <a class="btn btn-download-modal" href="#">下載模組</a>
               </form>
             </div>
