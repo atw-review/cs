@@ -140,80 +140,84 @@ section
   overflow: hidden
   text-align: center
   .space-wrapper
-    height: 190px
-    padding: 2.5rem 0 0
+    display: flex
+    justify-content: center
+    height: 260px
+    padding: 5rem 0 0
     color: $white
     +bp(lg)
-      padding: 6.5rem 0 0
       height: 520px
-    // 好運5樓大區
-    &.chill-house-l
-      background: image-url("landing/space-chill-house-l.jpg") no-repeat
+      padding: 6.5rem 0 0
+    &.overlay::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: inherit
+      min-width: inherit
+      height: inherit
+      background: rgba(0,0,0,.75)
+      box-shadow: 0 0 30px rgba(0,0,0,.3)
+    > div
+      z-index: 1
+    // 吧台休息區
+    &.space-bar-chilling-space
+      background: image-url("landing/space-bar-chilling-space-m.jpg") no-repeat
       background-position: center center
-      background-size: 578px
-      +bp(sm)
-        background-size: 770px
-      +bp(md)
-        background-size: 994px
+      background-size: 768px
       +bp(lg)
+        background: image-url("landing/space-bar-chilling-space.jpg") no-repeat
         background-position: center top
         background-size: 520px
-    // 好運5樓小區
-    &.chill-house-s
-      background: image-url("landing/space-chill-house-s.jpg") no-repeat
+    // 小資屋塔房
+    &.space-suite
+      background: image-url("landing/space-suite-m.jpg") no-repeat
       background-position: center center
-      background-size: 578px
-      +bp(sm)
-        background-size: 770px
-      +bp(md)
-        background-size: 994px
+      background-size: 768px
       +bp(lg)
+        background: image-url("landing/space-suite.jpg") no-repeat
         background-position: center top
         background-size: 520px
-    // 好運辦公室
-    &.chill-office
-      background: image-url("landing/space-chill-office.jpg") no-repeat
+    // 挑高家景區
+    &.space-guest-hall
+      background: image-url("landing/space-guest-hall-m.jpg") no-repeat
       background-position: center center
-      background-size: 578px
-      +bp(sm)
-        background-size: 770px
-      +bp(md)
-        background-size: 994px
+      background-size: 768px
       +bp(lg)
+        background: image-url("landing/space-guest-hall.jpg") no-repeat
         background-position: center top
         background-size: 520px
-    // 好運酒吧
-    &.chill-bar
-      background: image-url("landing/space-chill-bar.jpg") no-repeat
+    // 辦公室
+    &.space-office
+      background: image-url("landing/space-office-m.jpg") no-repeat
       background-position: center center
-      background-size: 578px
-      +bp(sm)
-        background-size: 770px
-      +bp(md)
-        background-size: 994px
+      background-size: 768px
       +bp(lg)
+        background: image-url("landing/space-office.jpg") no-repeat
         background-position: center top
         background-size: 520px
-    // 好運空間
-    &.chill-space
-      background: image-url("landing/space-chill-space.jpg") no-repeat
+    // 會議室
+    &.space-meeting-room
+      background: image-url("landing/space-meeting-room-m.jpg") no-repeat
       background-position: center center
-      background-size: 578px
-      +bp(sm)
-        background-size: 770px
-      +bp(md)
-        background-size: 994px
+      background-size: 768px
       +bp(lg)
+        background: image-url("landing/space-meeting-room.jpg") no-repeat
         background-position: center top
         background-size: 520px
   .en
+    margin-bottom: .7rem
     font-family: 'Oswald', sans-serif
-    font-size: 1.5rem
+    font-size: 1.45rem
     font-weight: 400
+    line-height: 1
+    +bp(md)
+      font-size: 1.2rem
   .tc
     font-size: 1.125rem
     font-weight: 300
-    letter-spacing: 1.5px
+    line-height: 1
+    letter-spacing: 1px
   .btn
     padding: .5rem 1.2rem
     margin-top: 1rem
