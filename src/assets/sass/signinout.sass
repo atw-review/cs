@@ -1,31 +1,78 @@
 @import _chillspace-variables
 
-body.page-singin
-  width: 100%
-  max-width: 100%
-  height: 100%
+body.singinup
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
   color: $text-light
-  background: $bg-dark image-url("common/bg-signin.jpg") left top no-repeat
-  background-size: cover
+  background: $bg-dark
   section
-    padding: 5rem 0 2rem
-  h1.title
-    margin-bottom: .6rem
+    display: flex
+    flex-direction: column
+    padding: 0
+    +bp(lg)
+      flex-direction: row
+      height: 100%
+
+.feature-panel
+  display: flex
+  align-items: center
+  justify-content: center
+  order: 2
+  height: 300px
+  text-align: center
+  +bp(lg)
+    order: 1
+    width: 420px
+    height: 100%
+    overflow: hidden
+  &.signin
+    background: $bg-dark image-url("common/bg-signin-m.jpg") center center no-repeat
+    background-size: cover
+    +bp(lg)
+      background: $bg-dark image-url("common/bg-signin.jpg") center center no-repeat
+      background-size: cover
+  &.signup
+    background: $bg-dark image-url("common/bg-signup-m.jpg") center center no-repeat
+    background-size: cover
+    +bp(lg)
+      background: $bg-dark image-url("common/bg-signup.jpg") center center no-repeat
+      background-size: cover
+  h2
+    margin-top: 1.8rem
     font-family: 'Oswald', sans-serif
-    font-size: 2rem
+    font-size: 1.7rem
+    font-weight: 400
+    +bp(lg)
+      font-size: 2rem
+
+.signinup-panel
+  display: flex
+  align-items: center
+  justify-content: center
+  order: 1
+  +bp(lg)
+    order: 2
+    width: calc(100% - 420px)
+
+form.singinup
+  margin: 4rem auto
+  width: 90%
+  +bp(md)
+    width: 70%
+  +bp(lg)
+    margin: 0 auto
+    width: 70%
+  +bp(xl)
+    width: 66%
+  h1
+    margin-bottom: 2.5rem
+    font-size: 1.64rem
     font-weight: 300
-    letter-spacing: .5px
     color: $text-light-lighten
-    text-align: center
-  h2.subtitle
-    margin-bottom: 1rem
-    font-size: 1.1rem
-    font-weight: 300
-    letter-spacing: .5px
-    color: $text-light-lighten
-    text-align: center
-  form
-    margin-top: 4rem
+    +bp(lg)
+      margin-bottom: 1.5rem
+      font-size: 1.8rem
   .form-group
     margin: 1.5rem 0 0 0
     &:first-child
@@ -47,10 +94,12 @@ body.page-singin
   .btn-wrap
     margin-top: 2rem
   .subfeatures
-    margin: 0 0 .5rem
+    margin-bottom: 1.2rem
     line-height: 1.6
     color: $text-primary
     text-decoration: none
+    +bp(lg)
+      margin-bottom: .5rem
     input
       &[type=checkbox]
         position: absolute
@@ -65,11 +114,13 @@ body.page-singin
       &::after
         content: ''
         position: absolute
-        top: 12px
+        top: 13px
         left: 0
         width: 16px
         height: 16px
         +transform(translateY(-50%))
+        +bp(lg)
+          top: 12px
       &::before
         display: block
         background: $white
@@ -95,6 +146,3 @@ body.page-singin
     &.hint
       margin: 1.5rem 0 0
       color: $text-light-darken
-  footer
-    color: $text-light-darken
-    background: transparent

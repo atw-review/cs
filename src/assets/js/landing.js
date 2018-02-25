@@ -28,7 +28,6 @@ $(document).ready(function() {
       position: myLatlng,
       title:"CHILLSPACE"
   });
-  // To add the marker to the map, call setMap();
   marker.setMap(map);
 
   // photoswipe
