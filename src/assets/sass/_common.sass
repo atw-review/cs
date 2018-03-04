@@ -20,9 +20,8 @@ body.desktop-only
 a:focus
   outline: none !important
 
-.btn,
-.form-control,
-button
+.btn, button,
+.form-control
   height: auto !important
   padding: 1rem 2rem
   line-height: 1
@@ -35,6 +34,11 @@ button
 .form-control:focus,
 .form-control.focus
   box-shadow: none !important
+
+input
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
 
 .invalid-feedback
   margin-top: .5rem
@@ -66,6 +70,8 @@ button
         width: 85px
   .navbar-toggler
     font-size: 1rem
+    &:focus
+      outline: none
   .nav-item
     margin: 0 1.5rem
     +bp(md)

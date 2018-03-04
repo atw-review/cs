@@ -2,101 +2,112 @@
 <html xml:lang="zh-TW" lang="zh-TW" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <title>待酈芝姐提供</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chill Space 好運空間 | 訂單明細</title>
     @@include('../include/_meta.html')
-    <!-- style -->
     <link rel="stylesheet" href="../assets/css/vendor.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <!-- tracking code (GA/GTM/FB Pixel) -->
     <!-- old ver IE -->
   </head>
-  <body class="desktop-only page-account">
+  <body class="account">
     @@include('../include/_navbar.html')
     @@include('../include/_account-header.html')
     <section class="step section-bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-3">
-            @@include('../include/_sidebar.html')
+          <div class="col-12 col-lg-3">
+            @@include('../include/_account-sidebar.html')
           </div>
-          <div class="col-9">
-            <div class="settings">
+          <div class="col-12 col-lg-9">
+            <div class="account-settings">
               <h4 class="title">訂單明細</h4>
+              <!-- TO MAX: 若該帳號無租賃紀錄，請顯示以下這行，實作時請移除此註解，謝謝 -->
               <!-- <p class="text-muted">您目前尚無任何租賃紀錄</p> -->
               <p>訂單編號：********</p>
               <p>成立時間：2018-03-01</p>
               <h5 class="subtitle">場景</h5>
-              <table class="table table-hover order-detail">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">縮圖</th>
-                    <th scope="col">名稱</th>
-                    <th scope="col">單價</th>
-                    <th scope="col">時數</th>
-                    <th scope="col">小計</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">01</th>
-                    <td>
-                      <img class="item-img" src="./../assets/img/rent/spaces/space-01-square.jpg" alt="好運家景 (大區)">
-                    </td>
-                    <td>好運家景 (大區)</td>
-                    <td>2,000</td>
-                    <td>3</td>
-                    <td>6,000</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="list-group list-group-flush order-detail">
+                <div class="list-group-item list-group-item-info d-flex">
+                  <p>租借項目</p>
+                  <div class="ml-auto d-none d-md-block">
+                    <p class="item-quantity">時數</p>
+                    <p class="item-price">小計</p>
+                  </div>
+                </div><!-- /.title -->
+                <div class="list-group-item list-group-item-action d-flex align-items-center">
+                  <div class="item-img">
+                    <img class="img-fluid" src="./../assets/img/rent/spaces/space-01-square.jpg" alt="挑高家景區">
+                  </div>
+                  <div class="d-flex flex-column flex-md-row align-items-md-center item-detail">
+                    <div class="item-title">
+                      <p>挑高家景區</p>
+                      <small>$5,000 / 小時</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <p class="item-quantity"><span class="d-md-none">時數 </span>30</p>
+                      <p class="item-price"><span class="d-md-none">小計 </span>150,000</p>
+                    </div>
+                  </div>
+                </div><!-- /.item -->
+              </div>
               <h5 class="subtitle">傢俱</h5>
-              <table class="table table-hover order-detail">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">縮圖</th>
-                    <th scope="col">名稱</th>
-                    <th scope="col">單價</th>
-                    <th scope="col">數量</th>
-                    <th scope="col">小計</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">01</th>
-                    <td>
-                      <img class="item-img" src="./../assets/img/rent/props/prop-0001.jpg" alt="灰色長型沙發">
-                    </td>
-                    <td>長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試</td>
-                    <td>2,000</td>
-                    <td>3</td>
-                    <td>6,000</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">02</th>
-                    <td>
-                      <img class="item-img" src="./../assets/img/rent/props/prop-0001.jpg" alt="灰色長型沙發">
-                    </td>
-                    <td>灰色長型沙發</td>
-                    <td>2,000</td>
-                    <td>3</td>
-                    <td>6,000</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">03</th>
-                    <td>
-                      <img class="item-img" src="./../assets/img/rent/props/prop-0001.jpg" alt="灰色長型沙發">
-                    </td>
-                    <td>灰色長型沙發</td>
-                    <td>2,000</td>
-                    <td>3</td>
-                    <td>6,000</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="list-group list-group-flush order-detail">
+                <div class="list-group-item list-group-item-warning d-flex">
+                  <p>租借項目</p>
+                  <div class="ml-auto d-none d-md-block">
+                    <p class="item-quantity">數量</p>
+                    <p class="item-price">小計</p>
+                  </div>
+                </div><!-- /.title -->
+                <div class="list-group-item list-group-item-action d-flex align-items-center">
+                  <div class="item-img">
+                    <img class="img-fluid" src="./../assets/img/rent/props/prop-0001.jpg" alt="灰色長型沙發">
+                  </div>
+                  <div class="d-flex flex-column flex-md-row align-items-md-center item-detail">
+                    <div class="item-title">
+                      <p>灰色長型沙發</p>
+                      <small>$1,000 / 件</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <p class="item-quantity"><span class="d-md-none">數量 </span>3</p>
+                      <p class="item-price"><span class="d-md-none">小計 </span>3,000</p>
+                    </div>
+                  </div>
+                </div><!-- /.item -->
+                <div class="list-group-item list-group-item-action d-flex align-items-center">
+                  <div class="item-img">
+                    <img class="img-fluid" src="./../assets/img/rent/props/prop-0001.jpg" alt="灰色長型沙發">
+                  </div>
+                  <div class="d-flex flex-column flex-md-row align-items-md-center item-detail">
+                    <div class="item-title">
+                      <p>灰色長型沙發</p>
+                      <small>$1,000 / 件</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <p class="item-quantity"><span class="d-md-none">數量 </span>3</p>
+                      <p class="item-price"><span class="d-md-none">小計 </span>3,000</p>
+                    </div>
+                  </div>
+                </div><!-- /.item -->
+                <div class="list-group-item list-group-item-action d-flex align-items-center">
+                  <div class="item-img">
+                    <img class="img-fluid" src="./../assets/img/rent/props/prop-0001.jpg" alt="灰色長型沙發">
+                  </div>
+                  <div class="d-flex flex-column flex-md-row align-items-md-center item-detail">
+                    <div class="item-title">
+                      <p>長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試長字串測試</p>
+                      <small>$1,000 / 件</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <p class="item-quantity"><span class="d-md-none">數量 </span>3</p>
+                      <p class="item-price"><span class="d-md-none">小計 </span>3,000</p>
+                    </div>
+                  </div>
+                </div><!-- /.item -->
+              </div>
               <div class="order-total">
-                未稅合計 NT$<span class="price">336,000</span>
+                未稅合計 NT$<span class="total-price">159,000</span>
               </div>
             </div>
           </div>

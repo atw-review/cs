@@ -15,7 +15,7 @@ $(document).on('scroll', function () {
 
 $(document).ready(function() {
   // props filter
-  $('#props-filter, #account-sidebar').scrollToFixed({ marginTop: 100 });
+  $('#props-filter').scrollToFixed({ marginTop: 100 });
 
   // aos animation
   AOS.init({
