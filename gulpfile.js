@@ -12,8 +12,8 @@ var gulp               = require('gulp'),
     rev                = require('gulp-revm'),            // rev: json 版號
     revCollector       = require('gulp-revm-collector'),  // revCollector: 資源路徑更改
     browserSync        = require('browser-sync'),
+    nodemon            = require('gulp-nodemon'),
     reload             = browserSync.reload;
-
 
 // path
 var PATH_SRC_SASS  = 'src/assets/sass/*.sass';
@@ -27,26 +27,22 @@ var PATH_DES_IMG   = 'public/assets/img/';
 var PATH_DES_HTML  = 'public/';
 var PATH_REV_JSON  = 'rev/**/*.json';
 
-
 // gulp.task('print', function() {
 //   gulp.src(PATH_SRC_SASS)
 //     .pipe(print())
 // });
 
-
 // optimize images
-gulp.task('img', function () {
+gulp.task('img', function() {
   gulp.src(PATH_SRC_IMG)
     .pipe(imagemin())
     .pipe(gulp.dest(PATH_DES_IMG));
 });
 
-
 gulp.task('clean-css', function() {
   return gulp.src(PATH_DES_STYLE, {read: false})
     .pipe(clean());
 });
-
 
 var vendorcss = [
   'node_modules/bootstrap/dist/css/bootstrap.min.css',
@@ -56,20 +52,17 @@ var vendorcss = [
   'node_modules/photoswipe/dist/photoswipe.css'
 ]
 
-
 gulp.task('vendor-css', function() {
   return gulp.src(vendorcss)
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest(PATH_DES_STYLE));
 });
 
-
 gulp.task('vendor-css-img', function() {
   gulp.src(PATH_SRC_CSS)
     .pipe(imagemin())
     .pipe(gulp.dest(PATH_DES_STYLE));
 });
-
 
 // compile sass
 // gulp.task('compass', ['clean-css'], function() {
@@ -87,12 +80,10 @@ gulp.task('compass', function() {
     .pipe(gulp.dest('rev/css'));
 });
 
-
 gulp.task('clean-scripts', function() {
   return gulp.src(PATH_DES_JS, {read: false})
     .pipe(clean());
 });
-
 
 // concatenate & minify JS (MD5 process)
 // gulp.task('scripts', ['clean-scripts'], function() {
@@ -110,7 +101,6 @@ gulp.task('scripts', function() {
     .pipe(reload({stream: true}));
 });
 
-
 // reversion css/js deps on task [sass, scripts]
 gulp.task('rev-collector', ['compass', 'scripts'] ,function(cb) {
   gulp.src([PATH_REV_JSON, PATH_SRC_HTML])
@@ -126,14 +116,34 @@ gulp.task('rev-collector', ['compass', 'scripts'] ,function(cb) {
     cb();
 });
 
-// browser sync
-gulp.task('browser-sync', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./public/"
+// gulp.task('browser-sync', function() {
+//   browserSync.init({
+//     server: {
+//       baseDir: "./public/"
+//     }
+//   });
+// });
+
+gulp.task('browser-sync', ['nodemon'], function() {
+  browserSync.init(null, {
+    proxy: "http://localhost:5000",
+        files: ["public/**/*.*"],
+        browser: "google chrome",
+        port: 7000,
+  });
+});
+
+gulp.task('nodemon', function(cb) {
+  var started = false;
+  return nodemon({
+    script: 'app.js'
+  }).on('start', function () {
+    if (!started) {
+      cb();
+      started = true;
     }
   });
-})
+});
 
 // watch
 gulp.task('watch',function() {
